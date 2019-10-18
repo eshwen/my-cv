@@ -408,7 +408,7 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://gitlab.com/\@gitlab}{\faIcon{gitlab}\acvHeaderIconSep\@gitlab}%
+          \href{https://gitlab.cern.ch/\@gitlab}{\faIcon{gitlab}\acvHeaderIconSep\@gitlab}% DEFAULT WAS https://gitlab.com/
         }%
       \ifthenelse{\isundefined{\@stackoverflowid}}%
         {}%
