@@ -562,8 +562,8 @@
 }
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
-\newcommand*{\cvhonor}[4]{%
-  \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+\newcommand*{\cvhonor}[4]{% If argument 1 is empty, remove the comma separating items 1 and 2 as it looks nicer
+  \honordatestyle{#4} & \honorpositionstyle{#1}\if\relax\detokenize{#1}\relax \else, \fi \honortitlestyle{#2} & \honorlocationstyle{#3} \\
 }
 
 % Define an environment for cvskill
