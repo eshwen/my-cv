@@ -14,3 +14,11 @@ Template license: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 ## Instructions
 
 Clone this repository. If running with, e.g., TeXLive on macOS, you will need to install the `Roboto` fonts. Just double-click on the `.ttf` files in [fonts/](fonts/) and they will install. The fonts may be installed by default if using an online editor like Overleaf (though I haven't tested whether this is true).
+
+
+## To do
+
+- Make improvements as suggested by Careers Service person
+- Send around to other people (parents, other colleagues, Henning and Joel?)
+- Add a pdf copy to profile on LinkedIn once ready?
+- Send final copy to people at Imagination Technologies
