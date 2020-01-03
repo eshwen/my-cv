@@ -555,7 +555,7 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{3pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} > {\setlength{\baselineskip}{0.67\baselineskip}} L{\textwidth - 4.0cm} R{2.5cm}}  % for middle column, change spacing between lines to 0.67x normal so honour entries look better
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} > {\setlength{\baselineskip}{0.75\baselineskip}} L{\textwidth - 4.0cm} R{2.5cm}}  % for middle column, change spacing between lines to 0.75x normal so honour entries look better and roughly matches normal wrapping
 }{%
     \end{tabular*}
   \end{center}
