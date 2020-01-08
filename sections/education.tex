@@ -1,6 +1,8 @@
 \cvsection{Education}
 
-\newcommand{\vpaddingEdu}{\vspace{0.5mm}}
+\newcommand{\vpaddingEduNorm}{\vspace{1mm}} % used to create more vertical space between entries in cvitems environment
+\newcommand{\vpaddingEduSubpoint}{\vspace{0.75mm}} % used to create more vertical space between entries in an itemize environment within the cvitems environment
+
 
 \begin{cventries}
     \cventry
@@ -11,17 +13,28 @@
         {
         \begin{cvitems} % Description(s) bullet points
             \item {Thesis title: \textbf{Hadronic Dark Matter Searches at CMS at 13 TeV} --- \entrydatestyle{Under supervision of H. Fl\"{a}cher. Expected submission in April 2020}}
+            \vpaddingEduSubpoint
             \begin{itemize}
-                \item[\bullet]{Add additional information here regarding thesis topic and work (search for dark matter belonging to different theories using data from LHC, involves generating simulated samples (signal), analysis of LHC data and comparisons to simulated samples (signal and Standard Model background), writing code mainly in Python to do so)}
+                \item[\bullet]{Performing searches for dark matter arising from various physics models by analysing data from LHC's CMS experiment.}
+                \vpaddingEduSubpoint
+                \item[\bullet]{Requires production of simulated data for signal, and comparing it along with simulated background (Standard Model processes) to LHC data in a statistical analysis framework to prove or disprove the model.}
+                \vpaddingEduSubpoint
+                \item[\bullet]{Code to generate data and perform each step of analysis predominantly written in Python, leveraging modern data science tools and distributed computing where possible.}
             \end{itemize}
-            \vpaddingEdu
+            \vpaddingEduNorm
+            % ----------
             \item {\textbf{Postgraduate student representative} for the particle physics group, 2019--20 --- \entrydatestyle{Role in the Student-Staff Liaison Committee for the School of Physics}}
-            \vpaddingEdu
+            \vpaddingEduNorm
+            % ----------
             \item {\textbf{CERN}, Geneva, Switzerland --- \entrydatestyle{Long term attachment, Oct. 2017 -- Mar. 2019}}
-            \vpaddingEdu
+            \vpaddingEduNorm
+            % ----------
             \item {\textbf{Calorimeter Layer-2 on call expert} and \textbf{Level-1 Trigger shifter}, Geneva, Switzerland --- \entrydatestyle{Additional responsibilities at CERN}}
+            \vpaddingEduSubpoint
             \begin{itemize}
-                \item[\bullet]{Additional information regarding responsibilities (trained to perform these tasks [to help out] the CMS experiment and keep it operating smoothly, also helped develop and implement software in Level-1 Trigger)}
+                \item[\bullet]{Trained to carry out tasks to assist CMS experiment so operations continue smoothly.}
+                \vpaddingEduSubpoint
+                \item[\bullet]{Helped develop and implement software for Level-1 Trigger subsystem to apply corrections and calibrations to data.}
             \end{itemize}
         \end{cvitems}
         }
@@ -34,11 +47,16 @@
         {
         \begin{cvitems} % Description(s) bullet points
             \item {Dissertation title: \textbf{Simulations of Exoplanet Light Curves} --- \entrydatestyle{Under supervision of T. Harries}}
+            \vpaddingEduSubpoint
             \begin{itemize}
-                \item[\bullet]{Talk about what the project was about and what we/I did, what skills were required (developed software in C to simulate how photons can interact with planetary atmospheres to produce light curves, which could be applied to exoplanets to infer composition. Used Monte Carlo random sampling and parallelization)}
+                \item[\bullet]{Developed software in C to simulate how photons interact in simple planetary atmospheres, producing light curves akin to data from telescopes. Maps of density and composition were also created for model planets.}
+                \vpaddingEduSubpoint
+                \item[\bullet]{More complex atmospheres can also be modelled and compared to real exoplanets to infer their composition.}
+                \vpaddingEduSubpoint
+                \item[\bullet]{Utilised Monte Carlo random sampling for scattering of photons, and parallelisation to efficiently run the code over millions of photons.}
             \end{itemize}
         \end{cvitems}
-        } % Consider adding relevant modules with highest marks - Relativity and Cosmology (92 %), Mathematics for Physicists (91 %), Planets and their Atmospheres (87 %), Scientific Programming in C (71 %)
+        } % Consider adding relevant/highlighted modules with highest marks - Relativity and Cosmology (92 %), Mathematics for Physicists (91 %), Planets and their Atmospheres (87 %), Scientific Programming in C (71 %)
 
     \cventry
         {Secondary school qualifications}
@@ -48,11 +66,14 @@
         {
         \begin{cvitems}
             \item {\textbf{A Level}, 2010--12 --- \entrydatestyle{Biology (A*), Mathematics (A*), Physics (B), Chemistry (AS Level) (B)}}
-            \vpaddingEdu
-            %\item {\textbf{Open University}, 2011--12 --- \entrydatestyle{Introducing Astronomy (10 credit course)}}
-            %\vpaddingEdu
+            \vpaddingEduNorm
+            % ----------
+            \item {\textbf{Open University}, 2011--12 --- \entrydatestyle{Introducing Astronomy (10 credit course)}}
+            \vpaddingEduNorm
+            % ----------
             \item {\textbf{GCSE}, 2008--10 --- \entrydatestyle{10 including English Language and Mathematics at grades A* (4) to A (6)}}
-            %\vpaddingEdu
+            %\vpaddingEduNorm
+            % ----------
             %\item {\textbf{WJEC Key Skill}, 2008-10 --- \entrydatestyle{Communication (Level 2)}}
         \end{cvitems}
         }
