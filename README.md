@@ -1,5 +1,7 @@
 # my-cv
 
+[![Build Status](https://travis-ci.com/eshwen/my-cv.svg?branch=master)](https://travis-ci.com/eshwen/my-cv)
+
 My CV in LaTeX.
 
 This template has been downloaded from: <https://github.com/posquit0/Awesome-CV> with some changes from unmerged pull requests
