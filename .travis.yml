@@ -2,7 +2,9 @@ language: generic
 dist: bionic
 
 before_install:
- - fc-cache -f -v
+  - mkdir $HOME/.fonts
+  - cp -a $TRAVIS_BUILD_DIR/fonts/. $HOME/.fonts/
+  - fc-cache -f -v
 
 install:
   - source ./texlive/texlive_install.sh
