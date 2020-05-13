@@ -14,18 +14,20 @@ cache:
     - /tmp/texlive
     - $HOME/.texlive
 
+before_script:
+  - cp cv.tex Eshwen_Bhal_CV.tex
 script:
   # Texliveonfly will download packages automatically
-  - texliveonfly -c xelatex cv.tex
+  - texliveonfly -c xelatex Eshwen_Bhal_CV.tex
 
   # Compile
-  - xelatex cv.tex
+  - xelatex Eshwen_Bhal_CV.tex
 
 deploy:
   provider: releases
   token: $GITHUB_CI_TOKEN  # Secure variable for GitHub token. Set in settings page of repository (on Travis CI)
   file:
-    - ./cv.pdf
+    - ./Eshwen_Bhal_CV.pdf
   skip_cleanup: true
   on:
     tags: true
