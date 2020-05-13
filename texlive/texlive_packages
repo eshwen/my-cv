@@ -3,9 +3,10 @@
 # or use tlmgr info some-package
 
 # Base tools to compile
-texliveonfly latexmk
+texliveonfly latexmk xelatex
 
 # Collections
+collection-xetex
 collection-langeuropean
 collection-fontsrecommended
 
