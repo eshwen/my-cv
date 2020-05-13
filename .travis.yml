@@ -14,7 +14,7 @@ cache:
 
 script:
   # Texliveonfly will download packages automatically
-  - texliveonfly cv.tex
+  - texliveonfly -c xelatex cv.tex
 
   # Compile
   - xelatex cv.tex
