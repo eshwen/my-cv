@@ -1,0 +1,29 @@
+language: generic
+dist: bionic
+
+before_install:
+ - fc-cache -f -v
+
+install:
+  - source ./texlive/texlive_install.sh
+
+cache:
+  directories:
+    - /tmp/texlive
+    - $HOME/.texlive
+
+script:
+  # Texliveonfly will download packages automatically
+  - texliveonfly cv.tex
+
+  # Compile
+  - xelatex cv.tex
+
+deploy:
+  provider: releases
+  token: $GITHUB_CI_TOKEN  # Secure variable for GitHub token. Set in settings page of repository (on Travis CI)
+  file:
+    - ./cv.pdf
+  skip_cleanup: true
+  on:
+    tags: true
