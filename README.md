@@ -18,7 +18,7 @@ Template license: CC BY-SA 4.0 (<https://creativecommons.org/licenses/by-sa/4.0/
 
 Clone this repository. If running with, e.g., TeX Live on macOS, you will need to install the `Roboto` fonts. Just double-click on the `.ttf` files in [fonts/](fonts/) and they will install. The fonts may be installed by default if using an online editor like Overleaf (though I haven't tested whether this is true).
 
-Compilation must be done with `XeLaTeX` or `LuaLaTeX` because of the requirements of the `fontspec` package (i.e., you cannot use `pdflatex`). With the TeXShop IDE, you can just hit either the **LaTeX** or **XeLaTeX** options in the drop down menu next to **Typeset**, then hit the **Typeset** button.
+Compilation must be done with `XeLaTeX` or `LuaLaTeX` because of the requirements of the `fontspec` package (i.e., you cannot use `pdflatex`). With the TeXShop IDE, you can just hit either the **LaTeX** or **XeLaTeX** options in the drop down menu next to **Typeset**, then hit the **Typeset** button. The same functionality is possible using Visual Studio Code with the **LaTeX Workshop** extension. The magic argument `%!TEX TS-program = xelatex` in [cv.tex](cv.tex) should allow you to just press **Build LaTeX Project**.
 
 In the terminal, assuming the relevant implementation is installed with your TeX distribution, you can just run
 
