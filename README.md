@@ -1,6 +1,6 @@
 # my-cv
 
-[![Build Status](https://travis-ci.com/eshwen/my-cv.svg?branch=master)](https://travis-ci.com/eshwen/my-cv) [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/eshwen/my-cv?include_prereleases)](https://github.com/eshwen/my-cv/releases/latest) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/eshwen/my-cv)
+[![Build Status](https://travis-ci.com/eshwen/my-cv.svg?branch=master)](https://travis-ci.com/eshwen/my-cv) [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/eshwen/my-cv)](https://github.com/eshwen/my-cv/releases/latest) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/eshwen/my-cv)
 
 Quick download of pdf: [![GitHub Releases (by Asset - pdf)](https://img.shields.io/github/downloads/eshwen/lab-book/latest/Eshwen_Bhal_CV.pdf?color=ff69b4)](https://github.com/eshwen/my-cv/releases/latest/download/Eshwen_Bhal_CV.pdf)
 
