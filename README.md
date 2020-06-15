@@ -32,6 +32,8 @@ or
 lualatex cv.tex
 ```
 
+There is also a template for a cover letter styled in the same way as the CV: [cover_letter.tex](cover_letter.tex). A pdf can be generated in the same manner as the CV.
+
 ## To do
 
 - Send around to other people (parents, other colleagues, Henning and Joel?)
