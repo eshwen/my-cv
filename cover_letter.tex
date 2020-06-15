@@ -10,7 +10,6 @@
 % http://www.posquit0.com
 %
 % Modifications by:
-% Junhao Dong <junhao.dong96@gmail.com>
 % Eshwen Bhal <eshwen.bhal@bristol.ac.uk>
 %
 % Template license:
@@ -55,6 +54,25 @@
 \input{sections/personal_info.tex}
 
 %-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Company Recruitment Team}  % team
+  {Google Inc.\\1600 Amphitheatre Parkway\\Mountain View, CA 94043}  % address
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for Software Engineer}
+% How the letter is opened
+\letteropening{Dear Mr./Ms./Dr. LastName,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+%-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal informations
@@ -65,21 +83,30 @@
 % Leave any of these blank if they are not needed
  \makecvfooter
    {\today}
-   {Eshwen Bhal~~~·~~~Curriculum Vitae}
+   {Eshwen Bhal~~~·~~~Cover Letter}
    {\thepage}
 
-%-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
-\input{sections/profile.tex}
-\input{sections/education.tex}
-\input{sections/experience.tex}
-\input{sections/skills.tex}
-\input{sections/awards.tex}
-%\input{sections/publications.tex}  % not necessary in general/industry-targeted CV
-%\input{sections/talks_posters.tex}  % not necessary in general/industry-targeted CV
-%\input{sections/references.tex}
+% Print the title with above letter informations
+\makelettertitle
 
 %-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+Insert text here.
+    
+\lettersection{Why Google?}
+Insert text here.
+    
+\lettersection{Why Me?}
+Insert text here.
+    
+\end{cvletter}
+    
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+\makeletterclosing
+    
 \end{document}
