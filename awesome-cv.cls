@@ -173,7 +173,7 @@
 %-------------------------------------------------------------------------------
 %                Configuration for styles
 %-------------------------------------------------------------------------------
-\spacing{1.15}
+\spacing{1.15}  % Set linespacing
 % Configure styles for each CV elements
 % For fundamental structures
 \newcommand*{\headerfirstnamestyle}[1]{{\fontsize{36pt}{1em}\headerfont\bfseries\color{text} #1}}
@@ -183,7 +183,7 @@
 \newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{9pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{19pt}{1em}\bodyfont\bfseries\color{text}\sectioncolor{#1}}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{18pt}{1em}\bodyfont\bfseries\color{text}\sectioncolor{#1}}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}}
 
@@ -210,6 +210,16 @@
 % For elements of skill
 \newcommand*{\skilltypestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{text} #1}}
+
+% For elements of the cover letter
+\newcommand*{\lettersectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\sectioncolor{#1}}}
+\newcommand*{\recipientaddressstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\recipienttitlestyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\lettertitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\bfseries\color{darktext} \underline{#1}}}
+\newcommand*{\letterdatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\lettertextstyle}{\fontsize{11pt}{1.4em}\bodyfontlight\upshape\color{graytext}}
+\newcommand*{\letternamestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\letterenclosurestyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
 
 
 %-------------------------------------------------------------------------------
@@ -305,6 +315,42 @@
 % Usage: \quote{<quote>}
 \renewcommand*{\quote}[1]{\def\@quote{#1}}
 
+% Defines writer's quote (optional)
+% Usage: \quote{<quote>}
+\renewcommand*{\quote}[1]{\def\@quote{#1}}
+
+% Defines recipient's information (cover letter only)
+% Usage: \recipient{<recipient name>}{<recipient address>}
+% Usage: \recipientname{<recipient name>}
+% Usage: \recipientaddress{<recipient address>}
+\newcommand*{\recipient}[2]{\def\@recipientname{#1}\def\@recipientaddress{#2}}
+\newcommand*{\recipientname}[1]{\def\@recipientname{#1}}
+\newcommand*{\recipientaddress}[1]{\def\@recipientaddress{#1}}
+
+% Defines the title for letter (cover letter only, optional)
+% Usage: \lettertitle{<title>}
+\newcommand*{\lettertitle}[1]{\def\@lettertitle{#1}}
+
+% Defines the date for letter (cover letter only)
+% Usage: \letterdate{<date>}
+\newcommand*{\letterdate}[1]{\def\@letterdate{#1}}
+
+% Defines a message of opening for letter (cover letter only)
+% Usage: \letteropening{<message>}
+\newcommand*{\letteropening}[1]{\def\@letteropening{#1}}
+
+% Defines a message of closing for letter (cover letter only)
+% Usage: \letterclosing{<message>}
+\newcommand*{\letterclosing}[1]{\def\@letterclosing{#1}}
+
+% Defines an enclosure for letter (cover letter only, optional)
+% Usage: \letterenclosure[<enclosure name>]{<enclosure>}
+\newcommand*{\letterenclname}[1][Enclosure]{\def\@letterenclname{#1}}
+\newcommand*{\letterenclosure}[2][]{%
+  % if an optional argument is provided, use it to redefine \enclname
+  \ifthenelse{\equal{#1}{}}{}{\def\@letterenclname{#1}}
+  \def\@letterenclosure{#2}
+}
 
 %-------------------------------------------------------------------------------
 %                Commands for extra
@@ -596,4 +642,55 @@
   \end{itemize}
   \end{justify}
   \vspace{-4.0mm}
+}
+
+%-------------------------------------------------------------------------------
+%                Commands for elements of Cover Letter
+%-------------------------------------------------------------------------------
+% Define an environment for cvletter
+\newenvironment{cvletter}{%
+  \lettertextstyle
+}{%
+}
+
+% Define a section for the cover letter
+% Usage: \lettersection{<section-title>}
+\newcommand{\lettersection}[1]{%
+  \par\addvspace{2.5ex}
+  \phantomsection{}
+  \lettersectionstyle{#1}
+  \color{gray}\vhrulefill{0.9pt}
+  \par\nobreak\addvspace{0.4ex}
+}
+
+% Define a title of the cover letter
+% Usage: \makelettertitle
+\newcommand*{\makelettertitle}{%
+  \vspace{8.4mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \recipienttitlestyle{\@recipientname} & \letterdatestyle{\@letterdate}
+  \end{tabular*}
+  \begin{singlespace}
+    \recipientaddressstyle{\@recipientaddress} \\\\
+  \end{singlespace}
+  \ifthenelse{\isundefined{\@lettertitle}}
+    {}
+    {\lettertitlestyle{\@lettertitle} \\}
+  \lettertextstyle{\@letteropening}
+}
+
+% Define a closing of the cover letter
+% Usage: \makeletterclosing
+\newcommand*{\makeletterclosing}{%
+  \vspace{3.4mm}
+  \lettertextstyle{\@letterclosing} \\\\
+  \letternamestyle{\@firstname\ \@lastname}
+  \ifthenelse{\isundefined{\@letterenclosure}}
+    {\\}
+    {%
+      \\\\\\
+      \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
+    }
 }
