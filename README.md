@@ -35,6 +35,4 @@ lualatex cv.tex
 ## To do
 
 - Send around to other people (parents, other colleagues, Henning and Joel?)
-- Add a pdf copy to profile on LinkedIn once ready?
 - Send final copy to people at Imagination Technologies
-- Add 3-4 paragraphs about PhD (intro to topic and what I'm doing, highlighting skills and experience I've gained) on a new page(s) and send that copy to Peter Skelton at Ab Initio
