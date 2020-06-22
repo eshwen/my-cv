@@ -1,7 +1,7 @@
 \cvsection{Education}
 
-\newcommand{\vpaddingEduNorm}{\vspace{1mm}} % used to create more vertical space between entries in cvitems environment
-\newcommand{\vpaddingEduSubpoint}{\vspace{0.75mm}} % used to create more vertical space between entries in an itemize environment within the cvitems environment
+\def\vPaddingLength{0.75mm}
+\newcommand{\vpaddingEduSubpoint}{\vspace{\vPaddingLength}} % used to create more vertical space between entries in an itemize environment within the cvitems environment
 
 
 \begin{cventries}
@@ -14,26 +14,20 @@
         \begin{cvitems} % Description(s) bullet points
             \item {Thesis: \textbf{Searches for dark matter with a focus on invisibly decaying Higgs bosons using the full Run-2 dataset of the CMS experiment at the LHC} --- \entrydatestyle{Under supervision of H. Fl\"{a}cher. Expected submission in July 2020}}
             \vpaddingEduSubpoint
-            \begin{itemize}
+            \begin{itemize}[itemsep=\vPaddingLength]
                 \item[\bullet]{Explored various physics models in search of dark matter by analysing data from LHC's CMS experiment. Set \textbf{world leading limits} on Higgs boson decay to invisible states.}
-                \vpaddingEduSubpoint
                 \item[\bullet]{Executed robust, comprehensive statistical analysis on real and simulated data, meticulously documenting concepts, results and code.}
-                \vpaddingEduSubpoint
                 \item[\bullet]{Composed versatile, robust, efficient code to simulate data and perform each step of analysis. Written predominantly in Python, leveraging modern data science tools, vectorisation, and distributed computing to process multiple terabytes of data.}
             \end{itemize}
-            \vpaddingEduNorm
             % ----------
             \item {\textbf{Postgraduate student representative} for particle physics, 2019--20 --- \entrydatestyle{Role in Student-Staff Liaison Committee}}
-            \vpaddingEduNorm
             % ----------
             \item {Long term attachment at world's largest particle physics laboratory \textbf{CERN} --- \entrydatestyle{18 month placement abroad in Switzerland}}
-            \vpaddingEduNorm
             % ----------
             \item {\textbf{Calorimeter Layer-2 on call expert} and \textbf{Level-1 Trigger shifter} --- \entrydatestyle{Additional responsibilities with CERN}}
             \vpaddingEduSubpoint
-            \begin{itemize}
+            \begin{itemize}[itemsep=\vPaddingLength]
                 \item[\bullet]{Assisted in detector operations and monitoring so CMS experiment could take data efficiently and operate smoothly.}
-                \vpaddingEduSubpoint
                 \item[\bullet]{Developed and deployed software for subsystem of Level-1 Trigger to apply corrections and calibrations to data on the fly.}
             \end{itemize}
         \end{cvitems}
@@ -47,15 +41,12 @@
         {
         \begin{cvitems} % Description(s) bullet points
             \item {Grade: \textbf{First Class} --- \entrydatestyle{77\,\% overall mark (4.0 GPA equivalent)}}
-            \vpaddingEduNorm
             % ----------
             \item {Dissertation: \textbf{Simulations of Exoplanet Light Curves} --- \entrydatestyle{Under supervision of T. Harries}}
             \vpaddingEduSubpoint
-            \begin{itemize}
+            \begin{itemize}[itemsep=\vPaddingLength]
                 \item[\bullet]{Developed software in C to simulate photons interacting simple planetary atmospheres, producing light curves akin to data from telescopes. Visualised model planets with maps of density and composition.}
-                \vpaddingEduSubpoint
                 \item[\bullet]{Able to model more complex atmospheres for comparison to real exoplanets to infer their composition.}
-                \vpaddingEduSubpoint
                 \item[\bullet]{Utilised Monte Carlo random sampling for scattering of photons, and parallelisation to efficiently run the code over millions of them.}
             \end{itemize}
         \end{cvitems}
@@ -69,13 +60,10 @@
         {
         \begin{cvitems}
             \item {\textbf{A Level}, 2010--12 --- \entrydatestyle{A*A*B in Mathematics, Biology, and Physics. Chemistry AS Level with grade B}}
-            \vpaddingEduNorm
             % ----------
             \item {\textbf{Open University}, 2011--12 --- \entrydatestyle{Introducing Astronomy (10 credit course)}}
-            \vpaddingEduNorm
             % ----------
             \item {\textbf{GCSE}, 2008--10 --- \entrydatestyle{10 including English Language and Mathematics at grades A* (4) and A (6)}}
-            %\vpaddingEduNorm
             % ----------
             %\item {\textbf{WJEC Key Skill}, 2008-10 --- \entrydatestyle{Communication (Level 2)}}
         \end{cvitems}
