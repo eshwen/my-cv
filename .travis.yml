@@ -39,10 +39,10 @@ deploy:
   token: $GITHUB_CI_TOKEN  # Secure variable for GitHub token. Set in settings page of repository (on Travis CI)
   file:
     - ./Eshwen_Bhal_CV.pdf
-    - ./cv_targeted_industries/Eshwen_Bhal_CV_academic.tex
-    - ./cv_targeted_industries/Eshwen_Bhal_CV_data_science.tex
-    - ./cv_targeted_industries/Eshwen_Bhal_CV_research.tex
-    - ./cv_targeted_industries/Eshwen_Bhal_CV_software.tex
+    - ./cv_targeted_industries/Eshwen_Bhal_CV_academic.pdf
+    - ./cv_targeted_industries/Eshwen_Bhal_CV_data_science.pdf
+    - ./cv_targeted_industries/Eshwen_Bhal_CV_research.pdf
+    - ./cv_targeted_industries/Eshwen_Bhal_CV_software.pdf
   skip_cleanup: true
   on:
     tags: true
