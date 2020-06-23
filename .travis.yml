@@ -27,10 +27,12 @@ script:
 
   # Compile each version of the document
   - xelatex Eshwen_Bhal_CV.tex
-  - xelatex cv_targeted_industries/Eshwen_Bhal_CV_academic.tex
-  - xelatex cv_targeted_industries/Eshwen_Bhal_CV_data_science.tex
-  - xelatex cv_targeted_industries/Eshwen_Bhal_CV_research.tex
-  - xelatex cv_targeted_industries/Eshwen_Bhal_CV_software.tex
+  - cd cv_targeted_industries
+  - xelatex Eshwen_Bhal_CV_academic.tex
+  - xelatex Eshwen_Bhal_CV_data_science.tex
+  - xelatex Eshwen_Bhal_CV_research.tex
+  - xelatex Eshwen_Bhal_CV_software.tex
+  - cd -
 
 deploy:
   provider: releases
