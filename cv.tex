@@ -23,6 +23,7 @@
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[12pt, a4paper]{awesome-cv}
+\usepackage{subfiles}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
@@ -72,24 +73,14 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{sections/profile.tex}
-
-\input{sections/education.tex}
-%\input{sections/education_research.tex}
-
-\input{sections/experience.tex}
-%\input{sections/experience_research.tex}
-%\input{sections/experience_data_science_software.tex}
-
-\input{sections/skills.tex}
-%\input{sections/skills_research.tex}
-%\input{sections/skills_data_science.tex}
-%\input{sections/skills_software.tex}
-
-\input{sections/awards.tex}
-%\input{sections/publications.tex}  % not necessary in general/industry-targeted CV
-%\input{sections/talks_posters.tex}  % not necessary in general/industry-targeted CV
-%\input{sections/references.tex}
+\subfile{sections/profile.tex}
+\subfile{sections/education.tex}
+\subfile{sections/experience.tex}
+\subfile{sections/skills.tex}
+\subfile{sections/awards.tex}
+%\subfile{sections/publications.tex}  % not necessary in general/industry-targeted CV
+%\subfile{sections/talks_posters.tex}  % not necessary in general/industry-targeted CV
+%\subfile{sections/references.tex}
 
 %-------------------------------------------------------------------------------
 \end{document}

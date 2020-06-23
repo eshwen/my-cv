@@ -16,18 +16,31 @@ cache:
 
 before_script:
   - cp cv.tex Eshwen_Bhal_CV.tex
+  - cp cv_targeted_industries/cv_academic.tex cv_targeted_industries/Eshwen_Bhal_CV_academic.tex
+  - cp cv_targeted_industries/cv_data_science.tex cv_targeted_industries/Eshwen_Bhal_CV_data_science.tex
+  - cp cv_targeted_industries/cv_research.tex cv_targeted_industries/Eshwen_Bhal_CV_research.tex
+  - cp cv_targeted_industries/cv_software.tex cv_targeted_industries/Eshwen_Bhal_CV_software.tex
+
 script:
   # Texliveonfly will download packages automatically
   - texliveonfly -c xelatex Eshwen_Bhal_CV.tex
 
-  # Compile
+  # Compile each version of the document
   - xelatex Eshwen_Bhal_CV.tex
+  - xelatex cv_targeted_industries/Eshwen_Bhal_CV_academic.tex
+  - xelatex cv_targeted_industries/Eshwen_Bhal_CV_data_science.tex
+  - xelatex cv_targeted_industries/Eshwen_Bhal_CV_research.tex
+  - xelatex cv_targeted_industries/Eshwen_Bhal_CV_software.tex
 
 deploy:
   provider: releases
   token: $GITHUB_CI_TOKEN  # Secure variable for GitHub token. Set in settings page of repository (on Travis CI)
   file:
     - ./Eshwen_Bhal_CV.pdf
+    - ./cv_targeted_industries/Eshwen_Bhal_CV_academic.tex
+    - ./cv_targeted_industries/Eshwen_Bhal_CV_data_science.tex
+    - ./cv_targeted_industries/Eshwen_Bhal_CV_research.tex
+    - ./cv_targeted_industries/Eshwen_Bhal_CV_software.tex
   skip_cleanup: true
   on:
     tags: true

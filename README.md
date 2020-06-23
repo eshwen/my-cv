@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/eshwen/my-cv.svg?branch=master)](https://travis-ci.com/eshwen/my-cv) [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/eshwen/my-cv)](https://github.com/eshwen/my-cv/releases/latest) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/eshwen/my-cv)
 
-Quick download of pdf: [![GitHub Releases (by Asset - pdf)](https://img.shields.io/github/downloads/eshwen/lab-book/latest/Eshwen_Bhal_CV.pdf?color=ff69b4)](https://github.com/eshwen/my-cv/releases/latest/download/Eshwen_Bhal_CV.pdf)
+Quick download of pdf(s): [![GitHub Releases (by Asset - pdf)](https://img.shields.io/github/downloads/eshwen/my-cv/latest/Eshwen_Bhal_CV.pdf?color=ff69b4)](https://github.com/eshwen/my-cv/releases/latest/download/Eshwen_Bhal_CV.pdf) [![GitHub Releases (by Asset - pdf academic)](https://img.shields.io/github/downloads/eshwen/my-cv/latest/Eshwen_Bhal_CV_academic.pdf?color=ff69b4)](https://github.com/eshwen/my-cv/releases/latest/download/Eshwen_Bhal_CV_academic.pdf) [![GitHub Releases (by Asset - pdf data science)](https://img.shields.io/github/downloads/eshwen/my-cv/latest/Eshwen_Bhal_CV_data_science.pdf?color=ff69b4)](https://github.com/eshwen/my-cv/releases/latest/download/Eshwen_Bhal_CV_data_science.pdf) [![GitHub Releases (by Asset - pdf research)](https://img.shields.io/github/downloads/eshwen/my-cv/latest/Eshwen_Bhal_CV_research.pdf?color=ff69b4)](https://github.com/eshwen/my-cv/releases/latest/download/Eshwen_Bhal_CV_research.pdf) [![GitHub Releases (by Asset - pdf software)](https://img.shields.io/github/downloads/eshwen/my-cv/latest/Eshwen_Bhal_CV_software.pdf?color=ff69b4)](https://github.com/eshwen/my-cv/releases/latest/download/Eshwen_Bhal_CV_software.pdf)
 
 My CV in LaTeX.
 
@@ -33,6 +33,8 @@ lualatex cv.tex
 ```
 
 There is also a template for a cover letter styled in the same way as the CV: [cover_letter.tex](cover_letter.tex). A pdf can be generated in the same manner as the CV.
+
+The subdirectory [cv_targeted_industries/](cv_targeted_industries/) contains tex files that build more targeted versions of the CV, swapping out the more generic sections in [sections/](sections/) for ones that highlight particular skills or experience related to those fields. They utilise the `subfiles` package to allow the preamble from [cv.tex](cv.tex), meaning compilation and style, etc. will be consistent across each version. The magic argument `%!TeX root = <file>` means `<file>` will be the one compiled in an editor like Visual Studio Code. Otherwise, compilation on the command line uses the same syntax as above.
 
 ## To do
 
