@@ -35,8 +35,3 @@ lualatex cv.tex
 There is also a template for a cover letter styled in the same way as the CV: [cover_letter.tex](cover_letter.tex). A pdf can be generated in the same manner as the CV.
 
 The subdirectory [cv_targeted_industries/](cv_targeted_industries/) contains tex files that build more targeted versions of the CV, swapping out the more generic sections in [sections/](sections/) for ones that highlight particular skills or experience related to those fields. They utilise the `subfiles` package to allow the preamble from [cv.tex](cv.tex), meaning compilation and style, etc. will be consistent across each version. The magic argument `%!TeX root = <file>` means `<file>` will be the one compiled in an editor like Visual Studio Code. Otherwise, compilation on the command line uses the same syntax as above.
-
-## To do
-
-- Send around to other people (parents, other colleagues, Henning and Joel?)
-- Send final copy to people at Imagination Technologies
