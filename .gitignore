@@ -250,3 +250,5 @@ TSWLatexianTemp*
 
 # PyCharm
 .idea/
+## Standard run.xml files ignored from LaTeX compilation. But keep run configurations
+!.run/*run.xml
