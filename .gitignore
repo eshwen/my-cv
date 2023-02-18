@@ -247,3 +247,6 @@ TSWLatexianTemp*
 
 # Mac
 .DS_Store
+
+# PyCharm
+.idea/
